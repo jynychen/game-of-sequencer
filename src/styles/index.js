@@ -32,18 +32,14 @@ export const Box = styled.div`
     border: 1px solid white;
     background: #F4F4F4;
     &.active {
-      background: #111111;
-      &.playing { animation: trip .2s infinite; }
+      background: #ff884d;
+      &.playing { animation: trip .1s infinite; }
     }
   }
   .playing { background: #EEEEEE; }
   @keyframes trip {
-    0% { background-color: #9400D3;  }
-    20% { background-color: #0000FF; }
-    40% { background-color: #00FF00; }
-    60% { background-color: #FFFF00; }
-    80% { background-color: #FF7F00; }
-    100% { background-color: #FF0000; }
+    0% { background-color: #ff5500; }
+    50% { background-color: #ffbb99; }
   }
 `;
 

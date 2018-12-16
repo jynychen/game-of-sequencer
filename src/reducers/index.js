@@ -16,7 +16,20 @@ import {
 // initial state for synth
 import StartAudioContext from 'startaudiocontext';
 import Tone from 'tone';
-const synth = new Tone.PolySynth(16, Tone.Synth);
+const synth = new Tone.PolySynth(3, Tone.Synth, {
+  "oscillator" : {
+    "type" : "fatsawtooth",
+    "count" : 3,
+    "spread" : 30
+  },
+  "envelope": {
+    "attack": 0.01,
+    "decay": 0.1,
+    "sustain": 0.5,
+    "release": 0.4,
+    "attackCurve" : "exponential"
+  },
+}).toMaster();
 const volume = new Tone.Volume(-16);
 synth.chain(volume, Tone.Master);
 volume.mute = false;

@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 export const AppContainer = styled.div`
   margin: auto;
-  max-width: 40vw;
+  max-width: 90vw;
   font-size: 1.5rem;
   @media (max-width: 960px) {
-    max-width: 65vw;
+    max-width: 70vw;
   }
   @media (max-width: 768px) {
     max-width: 90vw;
@@ -29,14 +29,14 @@ export const Box = styled.div`
     display: inline-block;
     width: 6.25%;
     height: 100%;
-    border: 1px solid white;
-    background: #F4F4F4;
+    border: 3px solid black;
+    background: #3d3d3d;
     &.active {
       background: #ff884d;
       &.playing { animation: trip .1s infinite; }
     }
   }
-  .playing { background: #EEEEEE; }
+  .playing { background: #1d1d1d; }
   @keyframes trip {
     0% { background-color: #ff5500; }
     50% { background-color: #ffbb99; }
@@ -45,13 +45,14 @@ export const Box = styled.div`
 
 export const ControlsContainer = styled.div`
   height: 50%;
-  padding-top: .5rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 
   .key-visualizer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: .2rem solid #111111;
+    border: .2rem solid white;
     width: 6rem;
     height 2rem;
     background: white;
@@ -76,7 +77,7 @@ export const ControlsContainer = styled.div`
     &:hover { cursor: pointer; }
 
     &:active {
-      background: #111111;
+      background: #white;
 
       .bouncey-ball {
         background: #F4F4F4;

@@ -8,8 +8,8 @@ import { Box } from '../styles';
 const App = () => (
   <div>
     <Header url="/about" />
-    <Grid />
     <Controls />
+    <Grid />
   </div>
 );
 
